@@ -1,0 +1,8 @@
+<%= render 'user_colors' %>
+<div class="event">
+  <div class="content">
+    <div class="summary" >
+      <strong class="<%= user_color_class(message.user_id) %>"><%= message.user.username %></strong>: <%= message.message %>
+    </div>
+  </div>
+</div>

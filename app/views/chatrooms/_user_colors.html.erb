@@ -1,0 +1,9 @@
+<style>
+  <% @chatroom.map(&:user_id).uniq.each do |user_id| %>
+    <% hex = Digest::MD5.hexdigest(user_id.to_s)[0..5] %>
+    .user-color-<%= hex %> {
+      color: #<%= hex %>;
+      font-weight: bold;
+    }
+  <% end %>
+</style>

@@ -20,4 +20,13 @@
 
 $(document).on("turbolinks:load", function () {
   $(".ui.dropdown").dropdown();
+
+  $(".message .close").on("click", function () {
+    $(this).closest(".message").transition("fade");
+  });
+  $(document).ready(function () {
+    setTimeout(function () {
+      $("#flash-message").fadeOut("slow");
+    }, 3000);
+  });
 });
